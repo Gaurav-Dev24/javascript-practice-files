@@ -1,4 +1,4 @@
-## Live Link
+# Live Link
 [app link](https://gdev-count-down-app.netlify.app/)
 
 ### About
