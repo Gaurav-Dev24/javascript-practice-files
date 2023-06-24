@@ -53,12 +53,11 @@
 
 // Write a javascript prog to create a new string adding "!New" in front of a given string. If the given string already consist of "!New" in it then return the original string.
 
-const newString = (str) => (str.includes("New!") ? console.log(str) : console.log("New! " + str));
-// const newStr = (str) => (str.indexOf("New!") === 0 ? console.log(str) : console.log("New! " + str));
+// const newString = (str) => (str.includes("New!") ? console.log(str) : console.log("New! " + str));
+// // const newStr = (str) => (str.indexOf("New!") === 0 ? console.log(str) : console.log("New! " + str));
 
-newString("car");
-newString("New! toy");
-
+// newString("car");
+// newString("New! toy");
 // newStr("car");
 // newStr("New! toy");
-
+ 
