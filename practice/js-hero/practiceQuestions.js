@@ -171,3 +171,14 @@ function round100(number) {
   console.log(round100(856.12));  // Output: 900
   console.log(round100(49.999));     // Output: 0
   console.log(round100(50));     // Output: 100
+
+// Write a function dice that returns like a dice a random number between 1 and 6.
+
+// topic- Random numbers
+function dice(){
+    let n1 = Math.floor(Math.random() * 6) + 1;
+    console.log(n1);
+}
+
+dice(); // it will return random number between 1 to 6
+
