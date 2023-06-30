@@ -1,0 +1,1 @@
+## This repository have all the practice codes of Javascript from various portals like "Free code camp", "Js Hero" and "Wscube youtube channel".
