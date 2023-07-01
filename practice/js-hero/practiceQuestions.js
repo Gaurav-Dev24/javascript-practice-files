@@ -236,3 +236,49 @@
 // xor(false,true); // return true
 // xor(true,false); // return true
 // xor(false,false); // return false
+
+// Write a function isEven that checks if a passed number is even. If the given number is even, true should be returned, otherwise false.
+
+// topic- strict equality 
+// function isEven(n){
+//     console.log(n % 2 === 0);
+// }
+
+// isEven(0); // print true
+// isEven(101); // print false
+// isEven(37); // print false
+// isEven(100); // print true
+
+// Write a function isThreeDigit that checks if a number is greater than or equal to 100 and less than 1000.
+
+// topic- comparing numbers
+// function isThreeDigit(n){
+//     console.log (n >= 100 && n < 1000);
+// }
+
+// isThreeDigit(100) // print true
+// isThreeDigit(999) // print true
+// isThreeDigit(99) // print false
+// isThreeDigit(1000) // print false
+
+// Write a function equals that checks two values for strict equality. If the two values are equal, the string 'EQUAL' should be returned. If they are unequal, you should get 'UNEQUAL'.
+
+// topic- if condition
+// function equal(a,b){
+//     if (a === b){
+//         return "EQUAL";
+//     }
+//     return"UNEQUAL"; 
+// }
+
+// var result1 = equal(1,1); 
+// var result2 = equal(1,2); 
+// var result3 = equal("gaurav","gaurav"); 
+// let result4 = equal("gaurav","Gaurav"); 
+
+// console.log(result1); // print EQUAL
+// console.log(result2); // print UNEQUAL
+// console.log(result3); // print EQUAL
+// console.log(result4); // print UNEQUAL
+
+// 
