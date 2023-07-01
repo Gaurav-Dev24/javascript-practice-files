@@ -80,5 +80,6 @@
 // \b	backspace
 // \f	form feed
 
-const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
-console.log(myStr);
+// const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+// console.log(myStr);
+
