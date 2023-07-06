@@ -83,3 +83,43 @@
 // const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 // console.log(myStr);
 
+// Use Bracket Notation to Find the Last Character in a String
+
+// const lastName = "Lovelace";
+// const lastLetterOfLastName = lastName[lastName.length - 1]; 
+// console.log(lastLetterOfLastName)
+
+// Use Bracket Notation to Find the Nth-to-Last Character in a String
+
+// const lastName = "Lovelace";
+// const secondToLastLetterOfLastName = lastName[lastName.length - 2]; 
+// console.log(secondToLastLetterOfLastName)
+
+// In this challenge, we provide you with a noun, a verb, an adjective and an adverb. You need to form a complete sentence using words of your choice, along with the words we provide
+
+// const myNoun = "dog";
+// const myAdjective = "big";
+// const myVerb = "ran";
+// const myAdverb = "quickly";
+
+// const wordBlanks = "I have a "+ myAdjective + " " + myNoun + " who "+ myVerb + " very "+ myAdverb + "."; 
+// console.log(wordBlanks);
+
+// Access Multi-Dimensional Arrays With Indexes
+
+// One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outermost (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+
+// Example
+
+// const arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [[10, 11, 12], 13, 14]
+// ];
+
+// const subarray = arr[3]; // return [[10, 11, 12], 13, 14]
+// const nestedSubarray = arr[3][0]; // return [10, 11, 12]
+// const element = arr[3][0][1]; // 11
+
+// 
