@@ -122,4 +122,122 @@
 // const nestedSubarray = arr[3][0]; // return [10, 11, 12]
 // const element = arr[3][0][1]; // 11
 
-// 
+// // Write a program that prints numbers from 1 to 100. Except, for the multiples of three, print "google" and for the multiples of five, print "facebook". And, for the multiples of both, print "amazon".  Please answer with a stackblitz or codesandbox link.
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("amazon");
+//     } else if (i % 3 === 0) {
+//       console.log("google");
+//     } else if (i % 5 === 0) {
+//       console.log("facebook");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+
+// You are required to sort an array of objects, where each student is represented as an object 
+
+//  Each object has 4 keys, i.e, name, chemistry marks, biology marks, and date of birth. You should sort the array of objects according to the following rules: 
+
+//  1. The first priority is the total marks.
+//  2. In case the students have the same total marks, the next priority should be the number of marks in biology.
+//  3. If students have the same marks in biology, and chemistry and have the same date of birth, then any order between them is acceptable. 
+//  Note: Date of birth is given in the DD-MM-YYYY format.
+
+// TestCase 1
+// const students = [
+//      {
+//     name: "Leo Messi",
+//     dob: "31-12-1995",
+//     biology: 95,
+//     chemistry: 91,
+//   },
+//   {
+//     name: "Cristiano Ronaldo",
+//     dob: "31-05-1992",
+//     biology: 90,
+//     chemistry: 81,
+//   },
+//   {
+//     name: "Virat Kohli",
+//     dob: "31-12-1995",
+//     biology: 95,
+//     chemistry: 96,
+//   },
+//   {
+//     name: "Rohit Sharma",
+//     dob: "31-12-1995",
+//     biology: 85,
+//     chemistry: 86,
+//   },
+//   {
+//     name: "Viswanathan Anand",
+//     dob: "12-12-1994",
+//     biology: 99,
+//     chemistry: 10,
+//   },
+//   ];
+
+// Test Case2
+let students = [
+    {
+        name: "Leo Messi",
+        dob: "31-12-1995",
+        biology: 100,
+        chemistry: 80,
+      },
+      {
+        name: "Cristiano Ronaldo",
+        dob: "31-05-1992",
+        biology: 80,
+        chemistry: 100,
+      },
+      {
+        name: "Virat Kohli",
+        dob: "31-12-1995",
+        biology: 30,
+        chemistry: 40,
+      },
+      {
+        name: "Rohit Sharma",
+        dob: "31-12-1995",
+        biology: 40,
+        chemistry: 30,
+      },
+      {
+        name: "Viswanathan Anand",
+        dob: "12-12-1994",
+        biology: 99,
+        chemistry: 10,
+      },
+  ];
+  
+  // Sorting function
+  students.sort((a, b) => {
+    // Rule 1: Sort by total marks (descending order)
+    if (a.chemistry + a.biology > b.chemistry + b.biology) {
+      return -1;
+    } else if (a.chemistry + a.biology < b.chemistry + b.biology) {
+      return 1;
+    }
+  
+    // Rule 2: Sort by biology marks (descending order)
+    if (a.biology > b.biology) {
+      return -1;
+    } else if (a.biology < b.biology) {
+      return 1;
+    }
+  
+    // Rule 3: Sort by date of birth (ascending order)
+    const [aDay, aMonth, aYear] = a.dob.split("-");
+    const [bDay, bMonth, bYear] = b.dob.split("-");
+    const aDate = new Date(`${aYear}-${aMonth}-${aDay}`);
+    const bDate = new Date(`${bYear}-${bMonth}-${bDay}`);
+  
+    return aDate - bDate;
+  });
+  
+  // Print the sorted array of student objects
+  console.log(students);
+  
