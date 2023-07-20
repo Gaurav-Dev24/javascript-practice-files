@@ -333,13 +333,15 @@
 
 // Write a function setFirstElement that takes an array and an arbitrary variable. The variable should be inserted as the first element in the array. The array should be returned.
 
-function setFirstElement(anArr, firstElement) {
-  anArr[0] = firstElement;
-  console.log(anArr);
-}
+// function setFirstElement(anArr, firstElement) {
+//   anArr[0] = firstElement;
+//   console.log(anArr);
+// }
 
-setFirstElement([1, 2], 3) // returns [ 3, 2 ].
+// setFirstElement([1, 2], 3) // returns [ 3, 2 ].
 
-setFirstElement([], 1) // returns [ 1 ].
+// setFirstElement([], 1) // returns [ 1 ].
 
-setFirstElement(['a', 'b', 'c'], 'x') // returns [ 'x', 'b', 'c' ].
+// setFirstElement(['a', 'b', 'c'], 'x') // returns [ 'x', 'b', 'c' ].
+
+// 
