@@ -24,7 +24,7 @@
 // function toCase(word){
 //     let charLower = word.toLowerCase();
 //     let charUpper = word.toUpperCase();
-    
+
 //     return charLower + '-' + charUpper;
 //     }
 
@@ -36,7 +36,7 @@
 // function shortcut(str1,str2){
 //     return  str1.charAt(0) + str2.charAt(0);
 //     }
-    
+
 // shortcut('Amnesty', 'International') // 'AI'
 
 // // Write a function firstChar, which returns the first character that is not a space when a string is passed.Example: firstChar(' Rosa Parks ') should return 'R'.
@@ -122,7 +122,6 @@
 
 // mean(1, 2); // 1.5
 
-
 // // Write a function hypotenuse that calculates the length of the hypotenuse of a right triangle. The length of the two legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid. If a and b are the lengths of the two legs and c is the length of the hypotenuse, the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3, 4) should return 5.
 
 // // topic - Math object
@@ -147,11 +146,11 @@
 
 // // topic- Math.PI
 // function area(r){
-//     let area = (r*r) * Math.PI; 
+//     let area = (r*r) * Math.PI;
 //     return area;
 //     }
 
-// area(10); // 100 *  PI  
+// area(10); // 100 *  PI
 
 // // Write a function round100 that rounds a number to the nearest hundred. Example: round100(1749) should return 1700 and round100(856.12) should return 900.
 
@@ -159,7 +158,7 @@
 // function round100(number) {
 //     var integer = Math.floor(number);
 //     var remainder = integer % 100;
-  
+
 //     if (remainder < 50) {
 //       return integer - remainder;
 //     } else {
@@ -230,7 +229,7 @@
 // function xor(x1,x2){
 //     console.log(x1 !== x2);
 
-// } 
+// }
 
 // xor(true,true); // return false
 // xor(false,true); // return true
@@ -239,7 +238,7 @@
 
 // Write a function isEven that checks if a passed number is even. If the given number is even, true should be returned, otherwise false.
 
-// topic- strict equality 
+// topic- strict equality
 // function isEven(n){
 //     console.log(n % 2 === 0);
 // }
@@ -268,17 +267,79 @@
 //     if (a === b){
 //         return "EQUAL";
 //     }
-//     return"UNEQUAL"; 
+//     return"UNEQUAL";
 // }
 
-// var result1 = equal(1,1); 
-// var result2 = equal(1,2); 
-// var result3 = equal("gaurav","gaurav"); 
-// let result4 = equal("gaurav","Gaurav"); 
+// var result1 = equal(1,1);
+// var result2 = equal(1,2);
+// var result3 = equal("gaurav","gaurav");
+// let result4 = equal("gaurav","Gaurav");
 
 // console.log(result1); // print EQUAL
 // console.log(result2); // print UNEQUAL
 // console.log(result3); // print EQUAL
 // console.log(result4); // print UNEQUAL
 
-// 
+// Write a function addWithSurcharge that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2.
+
+// function addWithSurcharge(a, b) {
+
+//     let surcharge = 0;
+
+//     if (a <= 10) {
+//       surcharge = surcharge + 1;
+//     } else {
+//       surcharge = surcharge + 2;
+//     }
+
+//     if (b <= 10) {
+//       surcharge = surcharge + 1;
+//     } else {
+//       surcharge = surcharge + 2;
+//     }
+
+//     console.log(a + b + surcharge);
+//   }
+// addWithSurcharge(5,15);  // 23
+// addWithSurcharge(10, 10);  // 22
+// addWithSurcharge(11, 10);  // 24
+// addWithSurcharge(11, 11);  // 26
+
+// Write a function addWithSurcharge that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10 and less than or equal to 20, the surcharge is 2. For each amount greater than 20, the surcharge is 3.
+
+// function addWithSurcharge(a, b) {
+//   let surcharge = 0;
+//   if (a <= 10) {
+//     surcharge = surcharge + 1;
+//   } else if (a > 10 && a <= 20) {
+//     surcharge = surcharge + 2;
+//   } else {
+//     surcharge = surcharge + 3;
+//   }
+//   if (b <= 10) {
+//     surcharge = surcharge + 1;
+//   } else if (b > 10 && b <= 20) {
+//     surcharge = surcharge + 2;
+//   } else {
+//     surcharge = surcharge + 3;
+//   }
+//   console.log(a + b + surcharge);
+// }
+
+// addWithSurcharge(1, 1) // returns 4
+// addWithSurcharge(10, 10) // returns 22
+// addWithSurcharge(11, 10) // returns 24
+// addWithSurcharge(21, 11) // returns 37.
+
+// Write a function setFirstElement that takes an array and an arbitrary variable. The variable should be inserted as the first element in the array. The array should be returned.
+
+function setFirstElement(anArr, firstElement) {
+  anArr[0] = firstElement;
+  console.log(anArr);
+}
+
+setFirstElement([1, 2], 3) // returns [ 3, 2 ].
+
+setFirstElement([], 1) // returns [ 1 ].
+
+setFirstElement(['a', 'b', 'c'], 'x') // returns [ 'x', 'b', 'c' ].
