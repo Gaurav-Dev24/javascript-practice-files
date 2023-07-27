@@ -344,4 +344,101 @@
 
 // setFirstElement(['a', 'b', 'c'], 'x') // returns [ 'x', 'b', 'c' ].
 
-// 
+// Write a function sort that takes an array filled with 3 numbers and returns these 3 numbers sorted in ascending order as an array.
+
+// function sort([a,b,c]){
+//     let arr = [a,b,c];
+//     arr.sort((a,b) => a-b);
+//     console.log(arr);
+// }
+
+// sort([1,2,3]); returns [ 1, 2, 3 ]
+// sort([2,3,1]); returns [ 1, 2, 3 ]
+// sort([3,2,1]); returns [ 1, 2, 3 ]
+// sort([3,1,2]); returns [ 1, 2, 3 ]
+
+// Write a function rotate that rotates the elements of an array. All elements should be moved one position to the left. The 0th element should be placed at the end of the array. The rotated array should be returned.
+
+// function rotate(arr){
+//     let moveLast = arr.shift();
+//     arr.push(moveLast);
+//     console.log(arr);
+// }
+
+// rotate(["a","b","c"]); returns [ 'b', 'c', 'a' ]
+// rotate([1,2]); returns [ 2, 1 ]
+// rotate([1, 'b', 'c', 37]) returns [ 'b', 'c', 37, 1 ]
+
+// Write a function add that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+
+// function add(arr, addValue){
+//     if(!arr.includes(addValue)){
+//         arr.push(addValue)
+//     }
+//     console.log(arr)
+// }
+
+// add([1, 2], 2); // [ 1, 2 ]
+// add([1, 2], 3) // [ 1, 2, 3 ]
+// add(['J'], 'S') // [ 'J', 'S' ]
+// add(['J'], 'J') // [ 'J' ]
+
+// Write a function concatUp that concatenate two arrays. The longer array should be appended to the shorter array. If both arrays are equally long, the second array should be appended to the first array.
+
+// function concatUp(firstArray, secondArray) {
+
+//     if (secondArray.length >= firstArray.length) {
+//       return firstArray.concat(secondArray);
+//     }
+
+//     return secondArray.concat(firstArray);
+//   }
+
+//   concatUp([5, 7], [6]) returns [ 6, 5, 7 ]
+//   concatUp(['x'], ['a', 'b']) returns [ 'x', 'a', 'b' ]
+//   concatUp([5, 7], [6, 8]) returns [ 5, 7, 6, 8 ]
+
+// Write a function halve that copies the first half of an array. With an odd number of array elements, the middle element should belong to the first half.
+
+// const halve = (arr) => {
+//   let halveIndex = Math.ceil(arr.length / 2);
+//   arr = arr.slice(0, halveIndex);
+//   console.log(arr);
+// }
+
+// halve([1, 2, 3, 4, 5]); // returns [ 1, 2, 3 ]
+// halve([1, 2, 3, 4]); // returns [ 1, 2 ]
+// halve([1, 2, 3]); // returns [ 1, 2 ]
+// halve([1, 2]); // returns [ 1 ]
+
+// Write a function list that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'. An empty array should return an empty string.
+
+// function list(words) {
+//   if (words.length === 0) {
+//     return "";
+//   }
+
+//   if (words.length === 1) {
+//     return words[0];
+//   }
+
+//   let wordsExLast = words.slice(0, words.length - 1);
+//   let lastWord = words[words.length - 1];
+//   return wordsExLast.join(", ") + " and " + lastWord;
+// }
+
+// list([]);
+// list(["love"]);
+// list(["Ernie", "Bert"]);
+// list(["Huey", "Dewey", "Louie"]);
+// list(["C", "C++", "Python", "PHP"]);
+
+// Write a function flat that flattens a two-dimensional array with 3 entries. 
+
+let row1 = [4, 9, 2];
+let row2 = [3, 5, 7];
+let row3 = [8, 1, 6];
+let loshu = [row1, row2, row3];
+
+// Example: flat(loshu) should return [4, 9, 2, 3, 5, 7, 8, 1, 6]. Thereby loshu is the magic square from the example above.
+
