@@ -435,24 +435,21 @@
 
 // Write a function flat that flattens a two-dimensional array with 3 entries. 
 
-// let row1 = [4, 9, 2];
-// let row2 = [3, 5, 7];
-// let row3 = [8, 1, 6];
-// let loshu = [row1, row2, row3];
-
 // Example: flat(loshu) should return [4, 9, 2, 3, 5, 7, 8, 1, 6]. Thereby loshu is the magic square from the example above.
 
-// console.log(a);
+function flat(arr) {
+  const flattened = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      flattened.push(arr[i][j]);
+    }
+  }
+  console.log(flattened); 
+}
 
-// Example of reduce()
-const array1 = [1, 2, 3, 4];
+flat([[], [], []]) // returns []
+flat([[1], [], []]) // returns [ 1 ].
+flat([[1], [2], [3]]) // returns [ 1, 2, 3 ].
+flat([[1, 2], [3, 4], [5, 6]]) // returns [ 1, 2, 3, 4, 5, 6 ].
 
-// 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
-const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue
-);
 
-console.log(sumWithInitial);
-// Expected output: 10
