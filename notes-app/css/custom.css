@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #a7e2da;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+#addBtn{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: #2e2929;
+    color: #fff;
+
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.notes{
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    margin: 15px;
+    margin-top: 55px;
+}
+.tool{
+    width: 100%;
+    background-color: #2e2929;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+}
+.tool i{
+    padding: 5px;
+    cursor: pointer;
+}
+.notes textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+}
+.notes textarea:focus{
+    border: none;
+    outline: none;
+}
