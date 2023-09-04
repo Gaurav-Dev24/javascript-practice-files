@@ -1,20 +1,26 @@
 import React from "react";
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
+// handler function to grab values from input field
   const inputTextHandler = (e) => {
     console.log(e.target.value);
     setInputText(e.target.value);
   };
+
+// handler function to submit the todos 
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
       ...todos,
+      // here we are creating each todo as obj.  
       {
         text: inputText,
         completed: false,
         id: Math.floor(Math.random() * 1000),
       },
     ]);
+    
+    // after creating todo obj. I reset the state as empty
     setInputText("");
   };
   return (
