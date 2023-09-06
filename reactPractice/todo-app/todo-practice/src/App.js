@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 import "./App.css";
@@ -9,6 +9,39 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
 
+  // state to handle filtering of todos
+  const[status, setStatus] = useState("all");
+  const[filteredTodos, setFilteredTodos] = useState([]);
+
+  // using useffect hook to filter the todo when the value of state like todos & status changes
+  useEffect(() => {
+    filterHandler();
+    saveLocalTodos();
+  },[todos, status])
+
+  // handler function to filter the todos
+  const filterHandler = () => {
+    switch (status) {
+      case "completed":
+        setFilteredTodos(todos.filter(todo => todo.completed === true));
+        break;
+      case "uncompleted":
+        setFilteredTodos(todos.filter(todo => todo.completed === false));
+        break;
+      default:
+        setFilteredTodos(todos);
+        break;
+    }
+  };
+
+  // Save the todos to localStorage
+  const saveLocalTodos = () => {
+    if(localStorage.getItem("todos") === null){
+      localStorage.setItem("todos", JSON.stringify([]));
+    }else{
+      localStorage.setItem("todos",JSON.stringify(todos));
+    }
+  }
 
   return (
     <div className="App">
@@ -20,8 +53,9 @@ function App() {
         setInputText={setInputText}
         todos={todos}
         setTodos={setTodos}
+        setStatus={setStatus}
       />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} filteredTodos={filteredTodos} setTodos={setTodos} />
     </div>
   );
 }

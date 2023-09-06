@@ -1,14 +1,14 @@
 import React from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ todos, setTodos, filteredTodos }) => {
   // console.log(todos)
   return (
     <div className="todo-container">
       <ul className="todo-list">
         {
           // using the obj. which was created in form component to map its value with unique keys for each todo.
-          todos.map((todo) => (
+          filteredTodos.map((todo) => (
             <Todo
               todos={todos}
               todo={todo}
