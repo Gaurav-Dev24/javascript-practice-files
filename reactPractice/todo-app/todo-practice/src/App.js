@@ -13,6 +13,11 @@ function App() {
   const[status, setStatus] = useState("all");
   const[filteredTodos, setFilteredTodos] = useState([]);
 
+  //  We want to run this handler only once
+  useEffect(() => {
+    getLocalTodos();
+  },[])
+
   // using useffect hook to filter the todo when the value of state like todos & status changes
   useEffect(() => {
     filterHandler();
@@ -34,12 +39,18 @@ function App() {
     }
   };
 
-  // Save the todos to localStorage
+  //handler function to Save the todos to localStorage
   const saveLocalTodos = () => {
+    localStorage.setItem("todos",JSON.stringify(todos));
+  }
+  
+  //handler function to Get the todos which are already saved
+  const getLocalTodos =() => {
     if(localStorage.getItem("todos") === null){
       localStorage.setItem("todos", JSON.stringify([]));
     }else{
-      localStorage.setItem("todos",JSON.stringify(todos));
+      let localTodos = JSON.parse(localStorage.getItem("todos"));
+      setTodos(localTodos);
     }
   }
 
