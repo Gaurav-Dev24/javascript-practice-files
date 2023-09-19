@@ -68,12 +68,13 @@
 
 .overlay h2 {
     margin-bottom: 20px;
+    color: blue;
     font-weight: 600;
 }
 
 .overlay h3 {
     margin-bottom: 10px;
-    color: blue;
+    color: rgb(241, 86, 145);
 }
 
 #search {
