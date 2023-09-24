@@ -11,7 +11,7 @@ import product10 from "./assets/10.jpg";
 import product11 from "./assets/11.jpg";
 
 
-export const PRODUCTS = [
+const PRODUCTS = [
 {
     id: 1,
     productName: "Nikkon 550D",
@@ -79,3 +79,5 @@ export const PRODUCTS = [
     productImage: product11, 
 },
 ];
+
+export default PRODUCTS;
