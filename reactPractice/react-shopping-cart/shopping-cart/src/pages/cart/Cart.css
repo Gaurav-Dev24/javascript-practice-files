@@ -1,0 +1,138 @@
+.effect {
+    --bg-color: #36e45c;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cartItem {
+    width: 700px;
+    height: 200px;
+    display: flex;
+  
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 30px;
+  }
+  h3,h1{
+    margin: 10px 0;
+  }
+  .cartItem img {
+    width: 220px;
+    margin: 2rem;
+  }
+  
+  .cartItem .description {
+    width: 100%;
+    margin-left: 2rem;
+    font-size: 25px;
+  }
+  
+  .countHandler input {
+    width: 40px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .checkout button {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  /* Utilities */
+  .card {
+    width: 700px;
+    height: 200px;
+    background: #fff;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+  }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px var(--box-shadow-color);
+  }
+
+
+  .card:hover .overlay {
+    transform: scale(4) translateZ(0);
+  }
+  .card:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+  }
+  .card:hover .circle:after {
+    background: var(--bg-color-light);
+  }
+  .card:hover h3 {
+    color: var(--text-color-hover);
+  }
+  .card:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+      0 15px 24px var(--box-shadow-color);
+  }
+  
+.card h3 {
+    font-size: 17px;
+    color: #4C5656;
+    margin-top: 30px;
+    width: auto;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+  }
+  .circle {
+    width: 90px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -10rem;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .circle img {
+  z-index: 10000;
+  transform: translateZ(0);
+}
+  .overlay {
+    width: 100px;
+    position: absolute; 
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 50px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+  }
+
+ 

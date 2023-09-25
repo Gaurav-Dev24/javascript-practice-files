@@ -11,7 +11,7 @@ const Shop = () => {
         </div>
         <div className="products ">
             {PRODUCTS.map((product) => (
-              <Product data={product}/>
+              <Product data={product}/> //passing data prop to Product component
             ))}
         </div>
     </div>

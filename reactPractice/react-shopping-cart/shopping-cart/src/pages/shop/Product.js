@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 import { ShopContext } from "../../context/ShopContext";
 
 const Product = (props) => {
+  // receiving the props i.e data from product component which is declared in Shop.js
   const { id, productName, productImage, price } = props.data;
+
+  // getting addToCart and cartItems from context
   const { addToCart, cartItems } = useContext(ShopContext);
 
   const cartItemAmount = cartItems[id];
