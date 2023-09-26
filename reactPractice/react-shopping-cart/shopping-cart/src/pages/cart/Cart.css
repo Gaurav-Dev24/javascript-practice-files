@@ -41,6 +41,9 @@
     text-align: center;
     font-weight: bolder;
   }
+  .countHandler button {
+    width: 20px;
+  }
   
   .checkout button {
     width: 150px;
@@ -118,7 +121,9 @@
     z-index: 1;
     transition: all 0.3s ease-out;
   }
-  
+  .circle div{
+    width: 150px;
+  }
   .circle img {
   z-index: 10000;
   transform: translateZ(0);
