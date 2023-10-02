@@ -63,9 +63,9 @@
 // o/p--
 // PROMISE OBJECT looks like 
 // Promise {<pending>}
-// [[Prototype]]: Promise
-// [[PromiseState]]: "fulfilled"
-// [[PromiseResult]]: Response
+// [[Prototype]]: Promise // tells the type of object
+// [[PromiseState]]: "fulfilled" // state of the promise
+// [[PromiseResult]]: Response // response of the promise
 
 
 // Response {type: 'cors', url: 'https://api.github.com/users/Gaurav-Dev24', redirected: false, status: 200, ok: true, …}
@@ -81,3 +81,10 @@
 // type: "cors"
 // url: "https://api.github.com/users/Gaurav-Dev24"
 // [[Prototype]]: Response
+
+
+// *************** Things to Remember ****************
+// 1. Promise obj. data/response is immutable
+// 2. Promise always resolves the callback only once.
+// 3. Promise solves the problem of "Inversion of control".
+
