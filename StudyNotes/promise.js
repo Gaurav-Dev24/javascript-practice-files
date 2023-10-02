@@ -52,15 +52,16 @@
 // ***********************************************************
 
 // Taking a public api of github
-const GITHUB_API = "https://api.github.com/users/Gaurav-Dev24";
+// const GITHUB_API = "https://api.github.com/users/Gaurav-Dev24";
 
 // using fetch() to make external call of api and return us a promise
 
-const user = fetch(GITHUB_API);
-console.log(user);
+// const user = fetch(GITHUB_API);
+// console.log(user);
 
-user.then(res => console.log(res));
+// user.then(res => console.log(res));
 // o/p--
+// PROMISE OBJECT looks like 
 // Promise {<pending>}
 // [[Prototype]]: Promise
 // [[PromiseState]]: "fulfilled"
