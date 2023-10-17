@@ -548,4 +548,3 @@ var message2 = () => {
 // Notes-- 
 // variables when hoisted they have "undefined" allocated in the memory
 // when normal function are hoisted they have exact copy of there declaration
-  +9
