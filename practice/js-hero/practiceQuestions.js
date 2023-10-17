@@ -437,19 +437,115 @@
 
 // Example: flat(loshu) should return [4, 9, 2, 3, 5, 7, 8, 1, 6]. Thereby loshu is the magic square from the example above.
 
-function flat(arr) {
-  const flattened = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      flattened.push(arr[i][j]);
-    }
-  }
-  console.log(flattened); 
-}
+// function flat(arr) {
+//   const flattened = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       flattened.push(arr[i][j]);
+//     }
+//   }
+//   console.log(flattened); 
+// }
 
-flat([[], [], []]) // returns []
-flat([[1], [], []]) // returns [ 1 ].
-flat([[1], [2], [3]]) // returns [ 1, 2, 3 ].
-flat([[1, 2], [3, 4], [5, 6]]) // returns [ 1, 2, 3, 4, 5, 6 ].
+// flat([[], [], []]) // returns []
+// flat([[1], [], []]) // returns [ 1 ].
+// flat([[1], [2], [3]]) // returns [ 1, 2, 3 ].
+// flat([[1, 2], [3, 4], [5, 6]]) // returns [ 1, 2, 3, 4, 5, 6 ].
 
+// ********** Milan Practice *******************
+// *** Basics History ****
 
+// Introduced in 1995 
+// Netscape browser programmer "Brandon Eich" created in just 10 days
+// Internet Explorer (Microsoft) -- JScript
+// Names ---
+// 1. Mocha -> // 2. LiveScript -> // 3. JavaScript
+// ECMA International -- Founded in 1996 --> set standards for JS
+//  Javascript + ECMA == ECMAScript (ECMA--rule)
+// All browsers can use javascript for programming
+
+// ECMA- Script Version 
+// ES- 1 -- 1997 (till 2009)
+// ES- 5 -- 2009 (lots of new features where added)
+// ES- 6 -- 2015 (till 2015) (Biggest update of JS) --> Modern JS
+
+// ***** Features of JS *******
+// case sensitive
+// dynamically typed
+// cross-platform
+// interpreted lang.
+// A compiled language is converted into machine code so that the processor can execute it. An interpreted language is a language in which the implementations execute instructions directly without earlier compiling a program into machine language
+// Backward compatible
+
+// **** Javascript Variables *****
+// variables --> stores data that can be used or changed when needed
+// There are "keywords" to define variables in JS
+// -- var (global scope)
+// -- let (local scope/blocked scope)
+// -- const (local scope/blocked scope)
+
+// Rules for defining variables
+// 1. Variable names must start with a letter, underscore (_), or a dollar sign ($)
+// eg->
+// var firstName = "Gaurav"; --(camel case)
+// var first_Name = "Gaurav"; --(snake case)
+// var _firstName = "Gaurav";
+// var $firstName = "Gaurav";
+
+// Note-- Varibales name never starts with numbers
+
+// 2. You cannot use reserved keywords as variable names.
+// (e.g., if, else, while, function, class, etc)
+// var 123Name = "Gaurav"; -- error - Invalid or unexpected token
+// console.log(123Name);
+
+// VAR 
+// -- It is keyword to declare variables in JS, the variables declared with "var" are global scope
+// -- Variables declared with var are hoisted (process in JS where variables are called even before initialization)
+// -- variable declarations and function declarations are hoisted
+
+// console.log(name); // undefined
+// console.log(age); // undefined
+// console.log(sex); // undefined
+// console.log(bool); // undefined
+// console.log(data); // undefined
+// console.log(arr); // undefined
+// console.log(obj); // undefined
+
+// Primitive Data Type
+var name = "Milan"; // string identifier 
+// console.log(name); // Milan
+var age = 23; // number identifier 
+// console.log(age); // 23 
+var sex = null; // null identifier 
+// console.log(sex); //null
+var bool = true; //boolean identifier 
+var data = undefined; //boolean identifier 
+
+// Non-Primitive data types
+var arr = [1,2,3]; // array identifier 
+var obj = {
+  user: "Milan",
+  age: 24,
+  Mobile: 895815
+}; // object identifier 
+
+message1(); // calling the function
+
+// Traditional ways
+function message1(){
+  console.log("Traditional hello")
+  var first = "Gaurav";
+} // Traditional Hello
+// undefined
+
+console.log(message2); //undefined
+// Arrow function
+var message2 = () => {
+  console.log("Arrow function Hello")
+} // undefined
+
+// Notes-- 
+// variables when hoisted they have "undefined" allocated in the memory
+// when normal function are hoisted they have exact copy of there declaration
+  +9
